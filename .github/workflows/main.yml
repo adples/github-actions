@@ -19,6 +19,6 @@ jobs:
           server: "ssh.alecp8.sg-host.com"
           port: 18765
           ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
-          local_path: "./"
+          local_path: "/src"
           remote_path: "/home/customer/www/alecp8.sg-host.com/public_html"
           args: "-o ConnectTimeout=5"
