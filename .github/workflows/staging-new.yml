@@ -1,0 +1,21 @@
+on:
+  push:
+    branches:
+      - staging
+
+jobs:
+  upload_to_sftp:
+    name: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: SFTP Sync
+        uses: swillner/sftp-sync-action@v1.0
+        with:
+          server: ssh.alecp8.sg-host.com
+          user: u2026-aweljgaf0wvn
+          port: 18765
+          user_private_key: "${{ secrets.SSH_PRIVATE_KEY }}"
+          remote: /home/customer/www/staging.alecp8.sg-host.com/public_html
+          mirror_options: "--exclude-glob=.git*/ --verbose --exclude-glob=nono/ --verbose --exclude-glob=dont-put.html"
