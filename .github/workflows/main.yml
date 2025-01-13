@@ -4,8 +4,8 @@ on:
       - main
     paths:
       exclude:
-        - .git/*
-        - .github/*
+        - ".git/*"
+        - ".github/*"
 
 jobs:
   deploy_job:
