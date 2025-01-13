@@ -19,3 +19,4 @@ jobs:
           user_private_key: "${{ secrets.SSH_PRIVATE_KEY }}"
           remote: /home/customer/www/alecp8.sg-host.com/public_html
           mirror_options: "--exclude-glob=.git*/ --verbose"
+          mirror_options: "--exclude-glob=nono/ --verbose"
