@@ -1,10 +1,11 @@
 on:
   push:
-    paths-ginore:
-      - ".git/**"
-      - ".github/**"
     branches:
       - main
+    paths:
+      exclude:
+        - .git/*
+        - .github/*
 
 jobs:
   deploy_job:
