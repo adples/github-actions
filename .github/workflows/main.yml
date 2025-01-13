@@ -1,5 +1,8 @@
 on:
   push:
+    paths-ginore:
+      - ".git/**"
+      - ".github/**"
     branches:
       - main
 
